@@ -1,4 +1,10 @@
 
+#pragma once
+
+#include "drawable.hpp"
+
+#include <memory>
+
 /// \class Circle
 /// \brief Class Circle can be used for inserting circle into image.
 ///
@@ -17,12 +23,6 @@
 /// After the object is created, it can be rendered into image
 /// by calling method addDrawble from the class Renderer.
 ///
-
-#pragma once
-
-#include "drawable.hpp"
-
-#include <memory>
 
 class Circle : public Drawable {
 
