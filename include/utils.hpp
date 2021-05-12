@@ -22,7 +22,7 @@ cv::Mat convertBGRtoBGRA(cv::Mat inputImage);
 /// \returns matrix containing transformed input.
 cv::Mat computeBirdsEyeView(cv::Mat homography, cv::Mat image, const cv::Size& windowSize);
 
-/// Function to remove barrel pincushion distortion.
+/// Function to remove barrel and pincushion distortion.
 /// \param input matrix containing distorted image.
 /// \param k distortion coefficient, set k positiove to remove barrel distortion and negative to remove pincushion distortion.
 /// \param scale is used to scale the input image to get rid of black background, which is caused by removing distortion.
