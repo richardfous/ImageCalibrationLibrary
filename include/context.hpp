@@ -1,4 +1,10 @@
 
+#pragma once
+
+#include <opencv2/opencv.hpp>
+
+class Drawable;
+
 /// \class Context
 /// \brief Context is used for displaying drawables.
 ///
@@ -8,12 +14,6 @@
 /// containing drawables is then merged with background
 /// image in class Renderer.
 ///
-
-#pragma once
-
-#include <opencv2/opencv.hpp>
-
-class Drawable;
 
 class Context {
 
@@ -30,7 +30,7 @@ class Context {
         void clear();
 
         /// This method is used for drawing drawables.
-        /// \param drawable adress of drawable.
+        /// \param drawable instance of drawable.
         void draw(Drawable& drawable);
 
         /// \returns context.
