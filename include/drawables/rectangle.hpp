@@ -1,4 +1,8 @@
 
+#pragma once
+
+#include "drawable.hpp"
+
 /// \class Rectangle
 /// \brief Class Rectangle can be used for drawing squares and rectangles.
 ///
@@ -20,14 +24,11 @@
 /// by calling method addDrawble from the class Renderer.
 ///
 
-#pragma once
-
-#include "drawable.hpp"
 
 class Rectangle : public Drawable {
 
     public:
-        /// \class Type is used to specify if object is rectangle or square.
+        /// Type is used to specify if object is rectangle or square.
         enum class Type {
 
             Square, Rectangle
