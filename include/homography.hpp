@@ -1,4 +1,11 @@
 
+#pragma once
+
+#include <string>
+#include <vector>
+
+#include <opencv2/opencv.hpp>
+
 /// \class Homography
 /// \brief Class used for calculating and storing homography matrix.
 ///
@@ -17,13 +24,6 @@
 /// calling method getInverseHomographyMatrix.
 ///
 
-#pragma once
-
-#include <string>
-#include <vector>
-
-#include <opencv2/opencv.hpp>
-
 class PointManager;
 
 class Homography final {
@@ -34,11 +34,11 @@ class Homography final {
         Homography();
 
         /// Homography constructor from instance of PointManager class. This constructor automatically computes homography matrix.
-        /// \param pointManager adress of PointManager instance.
+        /// \param pointManager PointManager instance.
         Homography(const PointManager& pointManager);
 
         /// This method computes homography matrix from instance of PointManager.
-        /// \param pointManager adress of PointManager instance.
+        /// \param pointManager PointManager instance.
         void computeHomographyMatrix(const PointManager& pointManager);
 
         /// \returns homography matrix.
