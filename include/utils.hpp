@@ -1,7 +1,4 @@
 
-/// \class Utils
-/// \brief Class contaning helper functions.
-
 #pragma once
 
 #include <opencv2/opencv.hpp>
