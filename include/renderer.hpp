@@ -1,4 +1,12 @@
 
+#pragma once
+
+#include "context.hpp"
+#include "drawable.hpp"
+
+#include <memory>
+#include <vector>
+
 /// \class Renderer
 /// \brief Class to store and render drawables.
 ///
@@ -6,7 +14,7 @@
 /// used to render these instances to an output image, which can
 /// exported without background (as .png file) or can be placed
 /// on a user specified background image. Final image can be
-/// obained by calling getOutputImage method, where the bool
+/// obtained by calling getOutputImage method, where the bool
 /// variable specifies if the returned image should be with or
 /// without background image.
 ///
@@ -17,14 +25,6 @@
 /// When an instance of renderer is created a setBackgroundImage
 /// method needs to be called to set a background image that
 /// will be used to create the final image.
-
-#pragma once
-
-#include "context.hpp"
-#include "drawable.hpp"
-
-#include <memory>
-#include <vector>
 
 class Renderer final {
 
