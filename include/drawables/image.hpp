@@ -1,4 +1,10 @@
 
+#pragma once
+
+#include "drawable.hpp"
+
+#include "utils.hpp"
+
 /// \class Image
 /// \brief Class Line can be used for inserting image into another image.
 ///
@@ -24,16 +30,10 @@
 /// by calling method addDrawble from the class Renderer.
 ///
 
-#pragma once
-
-#include "drawable.hpp"
-
-#include "utils.hpp"
-
 class Image : public Drawable {
 
     public:
-        /// \class Rotation is used to specify input image rotation.
+        /// Rotation is used to specify input image rotation.
         enum class Rotation {
 
             _0, _90, _180, _270, Automatic
