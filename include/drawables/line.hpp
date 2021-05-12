@@ -1,4 +1,11 @@
 
+#pragma once
+
+#include "drawable.hpp"
+#include "homography.hpp"
+
+#include <memory>
+
 /// \class Line
 /// \brief Class Line can be used for drawing horizontal and vertical lines.
 ///
@@ -19,17 +26,10 @@
 /// by calling method addDrawble from the class Renderer.
 ///
 
-#pragma once
-
-#include "drawable.hpp"
-#include "homography.hpp"
-
-#include <memory>
-
 class Line : public Drawable {
 
     public:
-        /// \class Type is used to specify if object is horizontal or vertical line.
+        /// Type is used to specify if object is horizontal or vertical line.
         enum class Type {
 
             Horizontal, Vertical
