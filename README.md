@@ -2,7 +2,7 @@
 Library for camera perspective calibration and drawing into calibrated image.
 
 ## Dependencies
-This library requires opencv library be installed. For more information about opencv installation visit [opencv webiste.](https://opencv.org).
+This library requires opencv library be installed. For more information about opencv installation visit [opencv webiste](https://opencv.org).
 Minimum required version of Cmake is 3.0 with C++17 standard. More information about cmake can be obtained on [cmake webiste](https://cmake.org).
 
 ## Installation
