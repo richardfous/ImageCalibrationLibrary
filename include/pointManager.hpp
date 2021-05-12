@@ -1,4 +1,13 @@
 
+#pragma once
+
+#include <opencv2/opencv.hpp>
+
+#include <list>
+#include <memory>
+#include <utility>
+#include <vector>
+
 /// \class PointManager
 /// \brief Class to store point for Homography calculation.
 ///
@@ -10,10 +19,9 @@
 /// predefined mapping points. Scale and offset can also be
 /// specified when creating new instance. All predefined methods
 /// contain points, that are derived from actual sizes of sport
-/// field and are specified in meters. If homography matrix that is
-/// calculated with predefined points and without scale is used to
-/// transform given image to birds eye view, the output image can
-/// appear small. This can be solved by setting the scale value
+/// fields and are specified in meters. If homography matrix is
+/// calculated with predefined points and without scale the output
+/// image can appear small. This can be solved by setting the scale value
 /// larger than one. Offset can be used to specify how many pixels
 /// will be shown beyond the given boundaries in mapping points.
 ///
@@ -21,15 +29,6 @@
 /// and removed by calling method removeUserPoint. Position of
 /// image point can be improved by calling method improvePoints.
 ///
-
-#pragma once
-
-#include <opencv2/opencv.hpp>
-
-#include <list>
-#include <memory>
-#include <utility>
-#include <vector>
 
 class PointManager {
 
@@ -71,8 +70,8 @@ class PointManager {
         float computePixelDensity();
 
         /// This method is used to obtain image points and mapping points from existing user points.
-        /// \param imagePoints address of vector into which image points will be inserted.
-        /// \param mappingPoints address of vector into which mapping points will be inserted.
+        /// \param imagePoints vector into which image points will be inserted.
+        /// \param mappingPoints vector into which mapping points will be inserted.
         void copyImageMappingPoints(std::vector<cv::Point2f>& imagePoints, std::vector<cv::Point2f>& mappingPoints) const;
 
         /// Improve image points position based on given input image.
