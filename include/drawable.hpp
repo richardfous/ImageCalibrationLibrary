@@ -1,4 +1,12 @@
 
+#pragma once
+
+#include <opencv2/core/core.hpp>
+
+#include <memory>
+
+class Context;
+
 /// \class Drawable
 /// \brief Base class for drawables.
 ///
@@ -10,13 +18,6 @@
 /// Every attribute has get and set method.
 ///
 
-#pragma once
-
-#include <opencv2/core/core.hpp>
-
-#include <memory>
-
-class Context;
 class Homography;
 
 class Drawable {
@@ -31,7 +32,7 @@ class Drawable {
         virtual ~Drawable() = default;
 
         /// Draw object on context.
-        /// \param context adress of context.
+        /// \param context instance of context.
         virtual void draw(Context& context) = 0;
 
         /// \return transparency value.
