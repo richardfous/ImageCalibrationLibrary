@@ -3,25 +3,25 @@ Library for camera perspective calibration and drawing into calibrated image.
 
 ## Dependencies
 This library requires opencv library be installed. For more information about opencv installation visit [opencv webiste](https://opencv.org).
-Minimum required version of Cmake is 3.0 with C++17 standard. More information about cmake can be obtained on [cmake webiste](https://cmake.org).
+Minimum required version of Cmake is 3.0 with C++17 standard. More information about cmake can be obtained at [cmake webiste](https://cmake.org).
 
 ## Installation
-This library can me installed using cmake. You need either specify location of installed opencv in CMakeLists.txt or insert opencv library into 3rd party folder, which should be place in the root folder of this library. This library can be compiled on Windows, Linux and MacOS. To compile this library on Windows, you need to install cmake application and then follow this [guide](https://cmake.org/runningcmake/). To compile this library on Linux and MacOS, you can use the following command: 
+This library can be installed using cmake. You need to either specify location of installed opencv in CMakeLists.txt or insert opencv library into 3rd party folder, which should be place in the root folder of this library. This library can be compiled on Windows, Linux and MacOS. To compile this library on Windows, you need to install cmake application and then follow this [guide](https://cmake.org/runningcmake/). To compile this library on Linux and MacOS, you can use the following command: 
 
 ```
 mkdir build && cd build && cmake .. && make
 ```
 
-This creates a library file in the build folder, which you can then insert with the content of include file into your own application. 
+This creates a library file in the build folder, which you can then insert with the content of include folder into your own application. 
 
-If you are planning on using this library with QtCreator, all you need to do is copy the ImageCalibrationLibrary folder into your existing code, and then include the .pri file in your .pro file, which is used in your application.
+If you are planning on using this library with QtCreator, all you need to do is copy the ImageCalibrationLibrary folder into your existing code, and then include the .pri file in your .pro file.
 
 ```
 include(ImageCalibrationLibrary/ImageCalibrationLibrary.pri)
 ```
 
 ## Examples
-If you want to calculate homography of given image, you need to specify pairs of image and mapping points (called user points). The minimum number of pairs to be able to calculate homography is 4. Class Homography takes point manager as a input for homography calculation. So first you need to create an intance of PointManager class and then fill it with user user points. This can be achieved by either using create method if the sport you are looking for is present in this library or by using createCustom, which allows you to insert your own mapping points. 
+If you want to calculate homography of given image, you need to specify pairs of image and mapping points (called user points). The minimum number of pairs to be able to calculate homography is 4. Class Homography takes point manager as a input for homography calculation. First you need to create an intance of PointManager class and then fill it with user user points. This can be achieved by either using create method if the sport you are looking for is present in this library or by using createCustom, which allows you to insert your own mapping points. 
 
 ```
 //Create instance of class PointManager.
